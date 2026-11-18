@@ -99,5 +99,7 @@ export async function createLogo3D(canvas, { svgUrl, size = 1080 }) {
 
   return {
     render(state) { apply(state); renderer.render(scene, camera); },
+    // offsets (svg units) that centre the mark / wordmark alone on the lock-up origin
+    markCentre: -markHome.x, wordCentre: -wordHome.x,
   };
 }
