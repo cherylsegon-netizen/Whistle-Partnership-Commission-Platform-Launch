@@ -6,7 +6,7 @@ import { RoomEnvironment } from '../vendor/RoomEnvironment.js';
 
 export async function createLogo3D(canvas, { svgUrl, size = 1080 }) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
-  renderer.setPixelRatio(1);
+  renderer.setPixelRatio(2); // supersample for clean edges
   renderer.setSize(size, size, false);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1.15;
@@ -31,7 +31,7 @@ export async function createLogo3D(canvas, { svgUrl, size = 1080 }) {
   const side = new THREE.MeshPhysicalMaterial({ color: 0x4a19e4, roughness: 0.3, metalness: 0.45, clearcoat: 0.6, emissive: 0x2a0b8a, emissiveIntensity: 0.35 });
   const mats = [face, side];
 
-  function build(groupId, depth, bevel) {
+  function build(groupId, depth, bevel, useBevel = true) {
     const g = doc.getElementById(groupId);
     const holder = new THREE.Group();
     const loader = new SVGLoader();
@@ -41,7 +41,7 @@ export async function createLogo3D(canvas, { svgUrl, size = 1080 }) {
     for (const p of data.paths) {
       for (const shape of SVGLoader.createShapes(p)) {
         const geo = new THREE.ExtrudeGeometry(shape, {
-          depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel * 0.6, bevelSegments: 2, curveSegments: 10,
+          depth, bevelEnabled: useBevel, bevelThickness: bevel, bevelSize: bevel * 0.6, bevelSegments: 2, curveSegments: 10,
         });
         geoms.push(geo);
       }
@@ -61,7 +61,7 @@ export async function createLogo3D(canvas, { svgUrl, size = 1080 }) {
 
   // viewBox units: logo is 105 x 31; scale up so 1 unit ≈ 1px at z=0 with camera at 1000
   const markInner = build('mark', 5, 0.9);
-  const wordInner = build('word', 4, 0.7);
+  const wordInner = build('word', 4, 0.7, false); // no bevel: overlapping glyph contours would show seams
   const UNIT = 2.65; // world units per svg unit: lock-up ≈ 560px wide at s=1
 
   const logo = new THREE.Group();            // whole lock-up

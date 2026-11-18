@@ -66,9 +66,9 @@ html,body{height:100%;background:#07051a;overflow:hidden}
 
 /* ---------------- S1 hook ---------------- */
 .h-xl{font-weight:800;font-size:100px;line-height:1.04;letter-spacing:-.03em}
-.wave{position:absolute;left:548px;top:168px;width:120px;height:120px;border-radius:50%;border:9px solid transparent;border-top-color:var(--gold);border-right-color:var(--gold);
-  transform:rotate(-10deg);opacity:0;animation:wave 1s cubic-bezier(.2,.7,.3,1) var(--d) both}
-@keyframes wave{0%{opacity:0;transform:rotate(-10deg) scale(.3)}25%{opacity:1}100%{opacity:0;transform:rotate(-10deg) scale(2.2)}}
+.wave{position:absolute;left:560px;top:150px;width:var(--w);height:var(--w);margin:calc(var(--w)/-2) 0 0 calc(var(--w)/-2);border-radius:50%;border:7px solid transparent;border-top-color:var(--gold);border-right-color:var(--gold);
+  filter:drop-shadow(0 0 10px rgba(255,200,61,.8));transform:rotate(-20deg);opacity:0;animation:wave 1.1s cubic-bezier(.2,.7,.3,1) var(--d) both}
+@keyframes wave{0%{opacity:0;transform:rotate(-20deg) scale(.5)}15%{opacity:1}70%{opacity:1}100%{opacity:0;transform:rotate(-20deg) scale(1.25)}}
 
 /* ---------------- S2 payoff ---------------- */
 .h-xxl{font-weight:800;font-size:164px;line-height:1;letter-spacing:-.04em}
@@ -91,14 +91,14 @@ html,body{height:100%;background:#07051a;overflow:hidden}
 /* ---------------- S4 program ---------------- */
 .h2{font-weight:800;font-size:62px;line-height:1.06;letter-spacing:-.03em}
 .steps3d{position:absolute;left:60px;right:60px;top:340px;perspective:1600px}
-.pcard{position:relative;height:210px;margin-bottom:22px;border-radius:32px;background:#fff;color:var(--ink);display:flex;align-items:center;gap:30px;padding:0 36px;
+.pcard{position:relative;height:214px;margin-bottom:22px;border-radius:32px;background:#fff;color:var(--ink);display:flex;align-items:center;gap:30px;padding:0 36px;
   box-shadow:0 30px 60px rgba(8,4,40,.45);transform-origin:50% 0;animation:hinge .8s cubic-bezier(.2,1.1,.3,1) var(--d) both}
 @keyframes hinge{from{opacity:0;transform:rotateX(-100deg) translateZ(40px)}to{opacity:1;transform:none}}
 .pnum{flex:none;width:104px;height:104px;border-radius:30px;display:grid;place-items:center;font-size:52px;font-weight:800;color:#fff;
   background:linear-gradient(135deg,var(--violet),var(--violet2));box-shadow:0 10px 0 var(--violet-dk),0 18px 30px rgba(74,25,228,.35)}
 .pcard.g .pnum{background:linear-gradient(135deg,#FFD976,var(--gold2));color:var(--ink);box-shadow:0 10px 0 var(--gold-dk),0 18px 30px rgba(242,169,0,.35)}
-.pcard h3{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.pcard p{font:500 25px/1.35 "DM Sans";color:#4B5476;margin-top:8px}
+.pcard h3{font-size:42px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.pcard p{font:500 29px/1.3 "DM Sans";color:#4B5476;margin-top:8px}
 .pcard.g{background:linear-gradient(120deg,#fff 55%,#FFF4D6)}
 .pcard .em{color:var(--violet);font-weight:700}
 
@@ -107,7 +107,7 @@ html,body{height:100%;background:#07051a;overflow:hidden}
 .eqn{display:flex;align-items:center;justify-content:center;gap:26px}
 .chip{border-radius:30px;padding:22px 34px;text-align:center;box-shadow:0 22px 50px rgba(10,5,40,.4)}
 .chip b{display:block;font-size:60px;line-height:1.05;letter-spacing:-.03em}
-.chip span{font:500 22px "DM Sans";opacity:.85}
+.chip span{font:600 24px "DM Sans"}
 .chip.w{background:#fff;color:var(--ink)}
 .chip.y{background:linear-gradient(135deg,#FFE08A,var(--gold) 60%,var(--gold2));color:var(--ink)}
 .arrow{font-size:70px;font-weight:800}
@@ -119,12 +119,12 @@ html,body{height:100%;background:#07051a;overflow:hidden}
 .col .bar i::before{content:"";position:absolute;left:0;right:0;top:-26px;height:26px;background:#FFF0B8;transform:skewX(-45deg);transform-origin:0 100%;border-radius:4px}
 .col .bar i::after{content:"";position:absolute;top:-13px;bottom:0;right:-26px;width:26px;background:#D68E00;transform:skewY(-45deg);transform-origin:0 0}
 @keyframes grow{from{transform:scaleY(.02)}to{transform:none}}
-.col .lab{font:700 26px "DM Sans";margin-top:16px;color:#fff}
-.foot{position:absolute;left:70px;right:70px;bottom:46px;font:500 19px/1.4 "DM Sans";color:rgba(255,255,255,.82);text-align:center}
+.col .lab{font:700 26px "DM Sans";margin-top:16px;color:#fff;white-space:nowrap}
+.foot{position:absolute;left:60px;right:60px;bottom:34px;font:600 24px/1.35 "DM Sans";color:#fff;text-align:center;background:rgba(10,6,40,.45);padding:12px 20px;border-radius:16px}
 
 /* ---------------- S6 dashboard tour ---------------- */
 .cap{position:absolute;left:66px;right:66px;top:58px;font-weight:800;font-size:56px;line-height:1.06;letter-spacing:-.03em;opacity:0;
-  animation:up .55s cubic-bezier(.2,.9,.2,1) var(--in) both,capOut .3s ease-in var(--out,999s) forwards}
+  animation:up .5s cubic-bezier(.2,.9,.2,1) var(--in) both,capOut .18s ease-in var(--out,999s) forwards}
 @keyframes capOut{to{opacity:0;transform:translateY(-40px)}}
 .dots{position:absolute;right:66px;top:30px;display:flex;gap:9px}
 .dots i{width:38px;height:7px;border-radius:7px;background:rgba(255,255,255,.22);overflow:hidden;position:relative}
@@ -207,11 +207,19 @@ html,body{height:100%;background:#07051a;overflow:hidden}
 .b-open{background:#E2F6F1;color:#076B5B}.b-run{background:#FFE7A3;color:#7A4A00}.b-new{background:var(--coral);color:#fff}
 .trow{display:grid;column-gap:12px;grid-template-columns:1.05fr 1.15fr 1.25fr .7fr .95fr 1fr 1.35fr;align-items:center;padding:11px 18px;font-size:14px;font-variant-numeric:tabular-nums}
 .trow.th{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--muted);background:#FAF8FF;text-transform:uppercase;padding:9px 18px}
-.trow.r{animation:rowIn .55s cubic-bezier(.2,.9,.2,1) var(--d) both}
+
 .trow.hl{background:#FFFBEF;box-shadow:inset 4px 0 0 var(--coral)}
 @keyframes rowIn{from{opacity:0;transform:translateX(70px)}to{opacity:1;transform:none}}
 .stp{font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px;background:var(--lav2);color:var(--violet);white-space:nowrap}
 .stp.paid{background:#E2F6F1;color:#076B5B}
+.stp.run{background:#FFE7A3;color:#7A4A00}
+.sample{font:700 13px Poppins;letter-spacing:.06em;background:var(--lav2);color:var(--violet);padding:4px 10px;border-radius:20px;margin-left:8px;vertical-align:2px}
+.datechip{position:absolute;left:50%;top:50%;width:300px;margin:-120px 0 0 -150px;z-index:24;background:#fff;border-radius:26px;overflow:hidden;text-align:center;color:var(--ink);
+  box-shadow:0 40px 90px rgba(5,3,25,.5);animation:mIn2 .45s cubic-bezier(.2,1.4,.3,1) var(--d) both,mOut2 .25s ease var(--o) forwards}
+.datechip .m{background:var(--coral);color:#fff;font:700 26px Poppins;padding:10px;letter-spacing:.1em}
+.datechip .dd{font:800 110px/1 Poppins;letter-spacing:-.04em;padding:14px 0 4px}
+.datechip .lb{font:600 22px "DM Sans";color:var(--muted);padding-bottom:18px}
+@keyframes mIn2{from{opacity:0;transform:scale(.5) rotateX(60deg)}to{opacity:1;transform:none}}
 .num{text-align:right}
 /* modals */
 .dim{position:absolute;inset:0;background:rgba(20,15,58,.45);backdrop-filter:blur(3px);z-index:20;opacity:0;animation:dimIn .3s ease var(--d) both,fo2 .3s ease var(--o) forwards}
@@ -249,31 +257,31 @@ html,body{height:100%;background:#07051a;overflow:hidden}
 .stat b{display:block;font-size:56px;font-weight:800;letter-spacing:-.03em;line-height:1.05}
 .stat span{font:500 20px "DM Sans";color:var(--lav)}
 .ring{position:absolute;left:540px;width:0;height:0;transform-style:preserve-3d}
-.lchip{position:absolute;left:-125px;top:-52px;width:250px;height:104px;border-radius:22px;background:#fff;display:grid;place-items:center;
+.lchip{position:absolute;left:-120px;top:-50px;width:240px;height:100px;border-radius:22px;background:#fff;display:grid;place-items:center;
   box-shadow:0 18px 40px rgba(5,3,25,.45);backface-visibility:hidden}
-.lchip img{max-width:212px;max-height:72px}
+.lchip img{max-width:190px;max-height:64px}
 .lchip img.mono{filter:none}
 
 /* ---------------- S8 partners ---------------- */
 .pgrid{position:absolute;left:50%;top:360px;width:900px;margin-left:-450px;display:flex;flex-wrap:wrap;justify-content:center;gap:22px;perspective:1400px}
 .ptile{width:200px;height:160px;border-radius:26px;background:#fff;display:grid;place-items:center;box-shadow:0 22px 44px rgba(5,3,25,.45);
   animation:flipIn .7s cubic-bezier(.2,1.2,.3,1) var(--d) both}
-.ptile img{max-width:150px;max-height:110px;border-radius:10px}
+.ptile img{max-width:168px;max-height:112px;border-radius:10px}
 @keyframes flipIn{from{opacity:0;transform:rotateY(-110deg) translateZ(80px)}to{opacity:1;transform:none}}
 .pgrid-wrap{position:absolute;inset:0;animation:sway 3.4s ease-in-out var(--d) both}
 @keyframes sway{from{transform:perspective(1600px) rotateX(16deg) rotateY(-12deg)}to{transform:perspective(1600px) rotateX(6deg) rotateY(8deg)}}
 
 /* ---------------- S9 team ---------------- */
 .team{position:absolute;left:40px;right:40px;top:350px;display:flex;justify-content:center;gap:20px}
-.person{width:236px;text-align:center;animation:personIn .8s cubic-bezier(.2,1.2,.3,1) var(--d) both}
+.person{width:252px;text-align:center;animation:personIn .8s cubic-bezier(.2,1.2,.3,1) var(--d) both}
 @keyframes personIn{from{opacity:0;transform:perspective(900px) translateY(120px) rotateY(-50deg)}to{opacity:1;transform:none}}
 .ph{position:relative;width:226px;height:226px;margin:0 auto}
 .ph .disc{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 35% 30%,#9C7BFF,var(--violet) 60%,#2A0FA0);
   box-shadow:0 0 0 7px rgba(255,255,255,.9),0 0 0 15px rgba(123,77,255,.45),0 28px 50px rgba(5,3,25,.55)}
-.ph img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover}
+.ph img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.12) brightness(1.08);mix-blend-mode:luminosity}
 .ph img.cut{width:150%;height:150%;left:-25%;top:-6%;object-fit:contain}
 .person h4{font-size:30px;font-weight:700;margin-top:18px;line-height:1.1}
-.person p{font:500 21px "DM Sans";color:var(--lav);margin-top:6px}
+.person p{font:600 24px "DM Sans";letter-spacing:-.01em;white-space:nowrap;color:var(--lav);margin-top:6px}
 .callout{position:absolute;left:0;right:0;top:790px;font:500 30px "DM Sans";color:#fff}
 
 /* ---------------- S10 CTA ---------------- */
@@ -286,7 +294,9 @@ html,body{height:100%;background:#07051a;overflow:hidden}
 .btn-wrap{animation:pop .7s cubic-bezier(.2,1.5,.35,1) var(--d) both}
 .btn-pulse{animation:beat2 1s ease-in-out var(--d) 3 both}
 @keyframes beat2{0%,100%{transform:none}50%{transform:scale(1.06)}}
-.trio{font:700 30px "DM Sans";letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+.trio{font:700 30px "DM Sans";letter-spacing:.06em;color:#fff}
+.url{font:700 34px "DM Sans";color:#fff;margin-top:22px;letter-spacing:.01em}
+#endfade{position:absolute;inset:0;background:var(--navy);opacity:0;z-index:70;pointer-events:none}
 .badge{display:inline-block;font:700 22px "DM Sans";letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:var(--ink);padding:10px 22px;border-radius:40px}
 </style>
 </head>
@@ -295,96 +305,97 @@ html,body{height:100%;background:#07051a;overflow:hidden}
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
   <div id="vivid"></div>
   <div id="floor"></div>
-  <canvas id="gl" width="1080" height="1080"></canvas>
+  <canvas id="gl" width="2160" height="2160"></canvas>
 
-  <!-- S1 · HOOK 0–3.0s  (3D mark flies in and toots) -->
-  <section class="scene" style="--in:0s;--out:2.95s">
-    <div class="wave" style="--d:1.45s"></div><div class="wave" style="--d:1.65s"></div><div class="wave" style="--d:1.85s"></div>
-    <div class="center" style="position:absolute;left:60px;right:60px;top:560px">
-      <div class="eyebrow up" style="--d:.5s;margin-bottom:26px">Quick question</div>
-      <h1 class="h-xl"><span data-split="up" data-at=".7" data-gap=".09">Know a company</span><br><span data-split="up" data-at="1.0" data-gap=".09">that needs</span><br><span class="grad up" style="--d:1.3s;display:inline-block">more pipeline?</span></h1>
+  <!-- S1 · HOOK 0–2.75s  (question first; 3D mark flies in behind and toots) -->
+  <section class="scene" style="--in:0s;--out:2.75s">
+    <div class="wave" style="--d:1.4s;--w:90px"></div><div class="wave" style="--d:1.5s;--w:150px"></div><div class="wave" style="--d:1.6s;--w:210px"></div>
+    <div class="center" style="position:absolute;left:60px;right:60px;top:540px">
+      <div class="eyebrow up" style="--d:.05s;margin-bottom:26px">Consultants · Agencies · Advisors</div>
+      <h1 class="h-xl"><span data-split="up" data-at=".12" data-gap=".06">Know a company</span><br><span data-split="up" data-at=".3" data-gap=".06">that needs</span><br><span class="grad up" style="--d:.45s;display:inline-block">more pipeline?</span></h1>
     </div>
   </section>
 
-  <!-- S2 · PAYOFF 3.0–5.6s -->
+  <!-- S2 · PAYOFF 3.0–5.55s -->
   <section class="scene center" style="--in:3s;--out:5.55s">
     <div id="coins"></div>
-    <h1 class="h-xxl" style="position:relative"><span class="slam x3d" style="--d:3.15s;display:block">Refer them.</span><span class="slam gold x3d-gold" style="--d:3.85s;display:block">Get paid.</span></h1>
+    <h1 class="h-xxl" style="position:relative"><span class="slam x3d" style="--d:3.3s;display:block">Refer them.</span><span class="slam gold x3d-gold" style="--d:3.95s;display:block">Earn 10%.</span></h1>
+    <div class="up" style="--d:4.5s;position:relative;z-index:2;margin-top:34px;text-shadow:0 2px 14px rgba(20,10,80,.6);font:600 38px 'DM Sans';color:#fff">when they sign and pay Whistle</div>
   </section>
 
-  <!-- S3 · REVEAL 5.6–10.0s  (3D lock-up assembles) -->
-  <section class="scene" style="--in:5.6s;--out:9.95s">
-    <div class="flare" style="--d:6.2s"></div>
-    <div class="center" style="position:absolute;left:0;right:0;top:120px"><div class="eyebrow up" style="--d:5.8s">Introducing</div></div>
-    <div class="center" style="position:absolute;left:60px;right:60px;top:600px">
-      <div class="rule" style="--d:7.0s;margin-bottom:36px"></div>
-      <h2 class="title"><span class="up" style="--d:7.15s;display:block">Referral Partner</span><span class="up grad" style="--d:7.35s;display:block">Commission Platform</span></h2>
-      <div class="up" style="--d:7.9s;margin-top:30px;font:500 30px 'DM Sans';color:var(--lav)">Your referrals, fees and payouts. All in one place.</div>
+  <!-- S3 · REVEAL 5.6–9.2s  (3D lock-up assembles) -->
+  <section class="scene" style="--in:5.6s;--out:9.15s">
+    <div class="flare" style="--d:6.0s"></div>
+    <div class="center" style="position:absolute;left:0;right:0;top:120px"><div class="eyebrow up" style="--d:5.7s">Introducing</div></div>
+    <div class="center" style="position:absolute;left:60px;right:60px;top:590px">
+      <div class="rule" style="--d:6.5s;margin-bottom:34px"></div>
+      <h2 class="title"><span class="up" style="--d:6.6s;display:block">Referral Partner</span><span class="up grad" style="--d:6.8s;display:block">Commission Platform</span></h2>
+      <div class="up" style="--d:7.1s;margin-top:28px;font:600 32px 'DM Sans';color:var(--lav)">Your referred clients, fees and payouts. All in one place.</div>
     </div>
   </section>
 
-  <!-- S4 · WHAT IS IT 10.0–16.5s -->
-  <section class="scene" style="--in:10s;--out:16.45s">
-    <div style="position:absolute;left:66px;right:120px;top:84px">
-      <div class="eyebrow up" style="--d:10.1s;margin-bottom:18px">New to referrals?</div>
-      <h2 class="h2"><span data-split="up" data-at="10.25" data-gap=".07">How the Whistle Referral</span><br><span class="grad up" style="--d:10.6s;display:inline-block">Partner Program works</span></h2>
+  <!-- S4 · HOW IT WORKS 9.2–17.0s -->
+  <section class="scene" style="--in:9.2s;--out:16.95s">
+    <div style="position:absolute;left:66px;right:120px;top:80px">
+      <div class="eyebrow up" style="--d:9.3s;margin-bottom:18px">Three simple steps</div>
+      <h2 class="h2"><span data-split="up" data-at="9.45" data-gap=".06">How the Whistle Referral</span><br><span class="grad up" style="--d:9.8s;display:inline-block">Partner Program works</span></h2>
     </div>
-    <div class="steps3d">
-      <div class="pcard" style="--d:10.95s"><div class="pnum">1</div><div><h3>You introduce</h3><p>Know a company that needs outbound pipeline? A quick email, WhatsApp or LinkedIn intro is all it takes.</p></div></div>
-      <div class="pcard" style="--d:12.35s"><div class="pnum">2</div><div><h3>We take it from there</h3><p>We confirm your referral within 2 business days, then our team does the selling.</p></div></div>
-      <div class="pcard g" style="--d:13.75s"><div class="pnum">3</div><div><h3>You earn <span class="em">10%</span></h3><p>of the retainer fees we collect from your referral during their initial contract term. Paid monthly.</p></div></div>
+    <div class="steps3d" style="top:330px">
+      <div class="pcard" style="--d:10.2s"><div class="pnum">1</div><div><h3>You introduce</h3><p>Introduce them to our team by group email, WhatsApp or LinkedIn, with their OK.</p></div></div>
+      <div class="pcard" style="--d:11.3s"><div class="pnum">2</div><div><h3>We do the selling</h3><p>Within 2 business days we let you know if they qualify. Then our team takes over.</p></div></div>
+      <div class="pcard g" style="--d:12.4s"><div class="pnum">3</div><div><h3>You earn <span class="em">10%</span></h3><p>of the retainer fees we collect during their initial contract term. Paid monthly.</p></div></div>
     </div>
   </section>
 
-  <!-- S5 · EARNINGS 16.5–23.0s -->
-  <section class="scene" style="--in:16.5s;--out:22.75s">
-    <div class="fade-out" style="--o:19.6s;position:absolute;inset:0">
-      <div class="center" style="position:absolute;left:0;right:0;top:96px"><div class="eyebrow up" style="--d:16.6s;color:#fff">Your earnings potential</div></div>
-      <div class="center" style="position:absolute;left:0;right:0;top:170px"><div class="big10 x3d-gold tilt-in" style="--d:16.75s">10%</div></div>
-      <div class="center up" style="--d:17.3s;position:absolute;left:90px;right:90px;top:470px;font:500 34px/1.35 'DM Sans'">of the retainer fees Whistle collects from every client you refer, for their whole initial contract term</div>
+  <!-- S5 · EARNINGS 17.0–24.6s -->
+  <section class="scene" style="--in:17s;--out:24.6s">
+    <div class="fade-out" style="--o:20.5s;position:absolute;inset:0">
+      <div class="center" style="position:absolute;left:0;right:0;top:96px"><div class="eyebrow up" style="--d:17.1s;color:#fff">Your earnings potential</div></div>
+      <div class="center" style="position:absolute;left:0;right:0;top:170px"><div class="big10 x3d-gold tilt-in" style="--d:17.25s">10%</div></div>
+      <div class="center up" style="--d:17.7s;position:absolute;left:80px;right:80px;top:480px;font:600 36px/1.3 'DM Sans'">standard referral fee on the retainer fees<br>we collect from your referral</div>
       <div class="eqn" style="position:absolute;left:0;right:0;top:650px">
-        <div class="chip w pop" style="--d:17.9s"><b data-count="10000" data-at="17900" data-dur="700" data-fmt="usd0">$0</b><span>your referral pays Whistle</span></div>
-        <div class="arrow pop" style="--d:18.3s">→</div>
-        <div class="chip y pop" style="--d:18.5s"><b data-count="1000" data-at="18500" data-dur="700" data-fmt="usd0">$0</b><span>paid to you</span></div>
+        <div class="chip w pop" style="--d:18.2s"><b data-count="10000" data-at="18200" data-dur="400" data-fmt="usd0">$0</b><span>in retainer fees collected</span></div>
+        <div class="arrow pop" style="--d:18.5s">→</div>
+        <div class="chip y pop" style="--d:18.6s"><b data-count="1000" data-at="18600" data-dur="400" data-fmt="usd0">$0</b><span>to you</span></div>
       </div>
     </div>
     <div class="center" style="position:absolute;left:0;right:0;top:92px">
-      <div class="eyebrow up" style="--d:19.85s;color:#fff;margin-bottom:14px">What could that look like?</div>
-      <h2 class="h2 up x3d" style="--d:20s;font-size:76px">Refer more. <span class="gold x3d-gold">Earn more.</span></h2>
+      <div class="eyebrow up" style="--d:20.7s;color:#fff;margin-bottom:14px">Illustrative example</div>
+      <h2 class="h2 up x3d" style="--d:20.8s;font-size:76px">Refer more. <span class="gold x3d-gold">Earn more.</span></h2>
     </div>
-    <div class="bars3d up" style="--d:20.2s">
-      <div class="col"><div class="val" style="--d:20.5s" data-count="2100" data-at="20500" data-dur="900" data-fmt="usd0">$0</div><div class="bar" style="--h:38px;--d:20.4s"><i></i></div><div class="lab">1 referral</div></div>
-      <div class="col"><div class="val" style="--d:20.75s" data-count="10500" data-at="20750" data-dur="1000" data-fmt="usd0">$0</div><div class="bar" style="--h:190px;--d:20.65s"><i></i></div><div class="lab">5 referrals</div></div>
-      <div class="col"><div class="val gold" style="--d:21s" data-count="21000" data-at="21000" data-dur="1100" data-fmt="usd0">$0</div><div class="bar" style="--h:380px;--d:20.9s"><i></i></div><div class="lab">10 referrals</div></div>
+    <div class="bars3d up" style="--d:20.85s;bottom:200px">
+      <div class="col"><div class="val" style="--d:21.0s" data-count="1000" data-at="21000" data-dur="700" data-fmt="usd0">$0</div><div class="bar" style="--h:38px;--d:20.95s"><i></i></div><div class="lab">$10k collected</div></div>
+      <div class="col"><div class="val" style="--d:21.2s" data-count="5000" data-at="21200" data-dur="800" data-fmt="usd0">$0</div><div class="bar" style="--h:190px;--d:21.15s"><i></i></div><div class="lab">$50k collected</div></div>
+      <div class="col"><div class="val gold" style="--d:21.4s" data-count="10000" data-at="21400" data-dur="900" data-fmt="usd0">$0</div><div class="bar" style="--h:380px;--d:21.35s"><i></i></div><div class="lab">$100k collected</div></div>
     </div>
-    <div class="foot up" style="--d:21.3s">Illustrative: each referred client pays Whistle $21,000 during its initial contract term, at the standard 10% referral fee.<br>Actual fees depend on what your clients pay. Terms apply.</div>
+    <div class="foot up" style="--d:21.2s">Illustrative only, not typical or guaranteed. You earn when a qualified referral signs and pays Whistle. Terms apply.</div>
   </section>
 
-  <!-- S6 · PLATFORM TOUR 23.0–35.6s -->
-  <section class="scene" style="--in:23s;--out:35.55s">
-    <div class="dots"><i style="--d:23s;--len:3s"></i><i style="--d:26s;--len:2.6s"></i><i style="--d:28.6s;--len:2.8s"></i><i style="--d:31.4s;--len:2s"></i><i style="--d:33.4s;--len:2.2s"></i></div>
-    <div class="cap" style="--in:23.1s;--out:25.85s">Your own partner statement.<br><span class="grad">Updated every day.</span></div>
-    <div class="cap" style="--in:26.05s;--out:28.45s">Know exactly how and<br><span class="gold">when you get paid.</span></div>
-    <div class="cap" style="--in:28.65s;--out:31.25s">Watch your pots of gold<br><span class="gold">fill as your clients pay.</span></div>
-    <div class="cap" style="--in:31.45s;--out:33.25s">Every fee, line by line.<br><span class="grad">Fully transparent.</span></div>
-    <div class="cap" style="--in:33.45s">Upload your invoice.<br><span class="gold">Get paid every month.</span></div>
+  <!-- S6 · PLATFORM TOUR 24.75–39.6s -->
+  <section class="scene" style="--in:24.75s;--out:39.6s">
+    <div class="dots"><i style="--d:24.75s;--len:3.15s"></i><i style="--d:27.9s;--len:2.8s"></i><i style="--d:30.7s;--len:2.8s"></i><i style="--d:33.5s;--len:2.2s"></i><i style="--d:35.7s;--len:3.9s"></i></div>
+    <div class="cap" style="--in:24.9s;--out:27.75s">Your own partner statement.<br><span class="grad">Updated every day.</span></div>
+    <div class="cap" style="--in:28.0s;--out:30.55s">See how and when<br><span class="gold">you get paid.</span></div>
+    <div class="cap" style="--in:30.8s;--out:33.35s">Watch your pots of gold<br><span class="gold">fill as your clients pay.</span></div>
+    <div class="cap" style="--in:33.6s;--out:35.55s">Every fee,<br><span class="grad">line by line.</span></div>
+    <div class="cap" style="--in:35.8s">Upload your invoice by the 27th.<br><span class="gold">We pay on the last working day.</span></div>
 
     <div id="dstage"><div id="dwin">
       <div id="dpage">
         <div class="dcard dhead" id="a-top">
-          <div class="appicon" style="--d:24.2s"><img src="assets/whistle-mark-vector.svg" alt=""></div>
-          <div style="position:relative;z-index:1"><div class="kick">Referral partner statement</div><div class="dh1">Your Company Ltd</div><div class="dsub">Updated every day · as at 18 Nov 2026</div></div>
-          <div class="ubtn press" style="--d:33.55s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg>Upload invoice</div>
+          <div class="appicon" style="--d:25.6s"><img src="assets/whistle-mark-vector.svg" alt=""></div>
+          <div style="position:relative;z-index:1"><div class="kick">Referral partner statement <span class="sample">Sample data</span></div><div class="dh1">Your Company Ltd</div><div class="dsub">Updated every day · as at 18 Nov 2026</div></div>
+          <div class="ubtn press" style="--d:36.0s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></svg>Upload invoice</div>
         </div>
         <div class="welcome">Welcome! This is your referral fee statement from Whistle. Tap any ⓘ for a plain-English explanation.</div>
         <div class="kpis">
-          <div class="kpi k1" style="--d:23.7s"><div class="l">Earned to date <span class="i">i</span></div><div class="a" data-count="4280" data-at="23900" data-dur="1100" data-fmt="usd">$0.00</div><div class="f">Fees on payments your clients have made</div>
+          <div class="kpi k1" style="--d:24.95s"><div class="l">Earned to date <span class="i">i</span></div><div class="a" data-count="4280" data-at="25200" data-dur="1100" data-fmt="usd">$0.00</div><div class="f">Fees on payments your clients have made</div>
             <svg class="wm" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/></svg></div>
-          <div class="kpi k2" style="--d:23.77s"><div class="l">Paid to you <span class="i">i</span></div><div class="a" data-count="2940" data-at="23970" data-dur="1100" data-fmt="usd">$0.00</div><div class="f">Already paid into your account</div>
+          <div class="kpi k2" style="--d:25.02s"><div class="l">Paid to you <span class="i">i</span></div><div class="a" data-count="2940" data-at="25270" data-dur="1100" data-fmt="usd">$0.00</div><div class="f">Already paid into your account</div>
             <svg class="wm" viewBox="0 0 24 24" fill="#fff"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 9c0 1.7 3.6 3 8 3s8-1.3 8-3v3c0 1.7-3.6 3-8 3s-8-1.3-8-3zM4 15c0 1.7 3.6 3 8 3s8-1.3 8-3v3c0 1.7-3.6 3-8 3s-8-1.3-8-3z"/></svg></div>
-          <div class="kpi k3" style="--d:23.84s"><div class="l"><span class="pulse"></span>In your next payment run <span class="i">i</span></div><div class="a" data-count="1340" data-at="24040" data-dur="1100" data-fmt="usd">$0.00</div><div class="f">Paid on 30 Nov 2026 · your invoice: <b>Received</b></div>
+          <div class="kpi k3" style="--d:25.09s"><div class="l"><span class="pulse"></span>In your next payment run <span class="i">i</span></div><div class="a" data-count="1340" data-at="25340" data-dur="1100" data-fmt="usd">$0.00</div><div class="f">Paid on 30 Nov 2026 · send your invoice by 27 Nov</div>
             <svg class="wm" viewBox="0 0 24 24" fill="#05173D"><path d="M7 2h2v2h6V2h2v2h3v18H4V4h3zm-1 8v10h12V10z"/></svg></div>
-          <div class="kpi k4" style="--d:23.91s"><div class="l">Expected · client not paid yet <span class="i">i</span></div><div class="a" data-count="860" data-at="24110" data-dur="1100" data-fmt="usd">$0.00</div><div class="f">Becomes your fee once your client pays</div>
+          <div class="kpi k4" style="--d:25.16s"><div class="l">Expected · client not paid yet <span class="i">i</span></div><div class="a" data-count="860" data-at="25410" data-dur="1100" data-fmt="usd">$0.00</div><div class="f">Becomes your fee once your client pays</div>
             <svg class="wm" viewBox="0 0 24 24" fill="#7B4DFF"><path d="M6 2h12v5l-4 5 4 5v5H6v-5l4-5-4-5z"/></svg></div>
         </div>
 
@@ -393,8 +404,8 @@ html,body{height:100%;background:#07051a;overflow:hidden}
           <div class="jsteps">
             <div class="jstep"><div class="jc"><div class="st st-done">✓</div></div><div><h4>Your client pays Whistle</h4><p>Your fee follows money we have received.</p></div></div>
             <div class="jstep"><div class="jc"><div class="st st-done">✓</div></div><div><h4>Your fee appears here</h4><p>It shows on this statement the next day.</p></div></div>
-            <div class="jstep" id="j3"><div class="nowbg tA"></div><div class="jc"><div class="st st-now tA">3</div><div class="st st-done tB">✓</div></div><div><h4>You send your invoice by the 27th</h4><span class="here tA">← you are here</span><p>Upload it here, one invoice for the run.</p></div></div>
-            <div class="jstep" id="j4"><div class="nowbg tB"></div><div class="jc"><div class="st st-later tA">4</div><div class="st st-now tB">4</div></div><div><h4>We pay you on the last working day</h4><span class="here tB">← you are here</span><p>Of the month after your client paid.</p></div></div>
+            <div class="jstep"><div class="nowbg"></div><div class="jc"><div class="st st-now">3</div></div><div><h4>You send your invoice by the 27th</h4><span class="here">← you are here</span><p>Upload it here, one invoice for the run.</p></div></div>
+            <div class="jstep"><div class="jc"><div class="st st-later">4</div></div><div><h4>We pay you on the last working day</h4><p>Of the month after your client paid.</p></div></div>
           </div>
           <div class="good2k"><b>Good to know.</b> Expected dates and amounts can change: they depend on your client's campaign and on the date Whistle receives your client's payment. Fees stay in each client's currency.</div>
         </div>
@@ -407,95 +418,101 @@ html,body{height:100%;background:#07051a;overflow:hidden}
         <div class="sec" id="a-fees">
           <div class="sech">Your fee lines <span class="i">i</span><div class="tog"><span class="on">By client</span><span>By status</span></div></div>
           <div class="dcard grp">
-            <div class="grph"><div><h4>Example Client A <span class="bdg b-open">Fee window open</span> <span class="bdg b-run">In next payment run</span> <span class="bdg b-new pop" style="--d:32.4s">New</span></h4><div class="sub">10% of fees · USD · Fee window 1 Feb 2026 → 31 Jan 2027</div></div><div class="yf">YOUR FEES<b>$2,400.00</b></div></div>
-            <div class="trow th"><span>Client invoice</span><span>Client paid on</span><span class="num">Amount received</span><span class="num">Your rate</span><span class="num">Your fee</span><span>&nbsp;Payment run</span><span>Status</span></div>
-            <div class="trow r hl" style="--d:32.1s"><span>1042 <span class="bdg b-new">New</span></span><span>29 Oct 2026</span><span class="num">$6,000.00</span><span class="num">10%</span><span class="num"><b>$600.00</b></span><span>&nbsp;Nov 2026</span><span><span class="stp">Invoice received</span></span></div>
-            <div class="trow r" style="--d:32.25s"><span>1031</span><span>29 Sep 2026</span><span class="num">$6,000.00</span><span class="num">10%</span><span class="num">$600.00</span><span>&nbsp;Oct 2026</span><span><span class="stp paid">Paid</span></span></div>
+            <div class="grph"><div><h4>Example Client A <span class="bdg b-run">In next payment run</span> <span class="bdg b-new pop" style="--d:34.0s">New</span></h4><div class="sub">10% of fees · USD · Fee window 1 Jul 2026 → 31 Oct 2026</div></div><div class="yf">YOUR FEES<b>$2,400.00</b></div></div>
+            <div class="trow th"><span>Client invoice</span><span>Client paid on</span><span class="num">Amount received</span><span class="num">Your rate</span><span class="num">Your fee</span><span>Payment run</span><span>Status</span></div>
+            <div class="trow hl"><span>1042 <span class="bdg b-new">New</span></span><span>29 Oct 2026</span><span class="num">$6,000.00</span><span class="num">10%</span><span class="num"><b>$600.00</b></span><span>Nov 2026</span><span><span class="stp run">Next payment run</span></span></div>
+            <div class="trow"><span>1031</span><span>29 Sep 2026</span><span class="num">$6,000.00</span><span class="num">10%</span><span class="num">$600.00</span><span>Oct 2026</span><span><span class="stp paid">Paid</span></span></div>
+            <div class="trow"><span>1019</span><span>29 Aug 2026</span><span class="num">$6,000.00</span><span class="num">10%</span><span class="num">$600.00</span><span>Sep 2026</span><span><span class="stp paid">Paid</span></span></div>
+            <div class="trow"><span>1007</span><span>29 Jul 2026</span><span class="num">$6,000.00</span><span class="num">10%</span><span class="num">$600.00</span><span>Aug 2026</span><span><span class="stp paid">Paid</span></span></div>
           </div>
           <div class="dcard grp">
-            <div class="grph"><div><h4>Example Client B <span class="bdg b-open">Fee window open</span> <span class="bdg b-run">In next payment run</span></h4><div class="sub">10% of fees · USD · Fee window 1 May 2026 → 30 Apr 2027</div></div><div class="yf">YOUR FEES<b>$1,660.00</b></div></div>
-            <div class="trow r" style="--d:32.4s"><span>1038</span><span>24 Oct 2026</span><span class="num">$5,200.00</span><span class="num">10%</span><span class="num"><b>$520.00</b></span><span>&nbsp;Nov 2026</span><span><span class="stp">Invoice received</span></span></div>
+            <div class="grph"><div><h4>Example Client B <span class="bdg b-open">Fee window open</span> <span class="bdg b-run">In next payment run</span></h4><div class="sub">10% of fees · USD · Fee window 1 Aug 2026 → 31 Jan 2027</div></div><div class="yf">YOUR FEES<b>$1,660.00</b></div></div>
+            <div class="trow"><span>1038</span><span>24 Oct 2026</span><span class="num">$5,200.00</span><span class="num">10%</span><span class="num"><b>$520.00</b></span><span>Nov 2026</span><span><span class="stp run">Next payment run</span></span></div>
+            <div class="trow"><span>1024</span><span>24 Sep 2026</span><span class="num">$5,700.00</span><span class="num">10%</span><span class="num">$570.00</span><span>Oct 2026</span><span><span class="stp paid">Paid</span></span></div>
+            <div class="trow"><span>1013</span><span>24 Aug 2026</span><span class="num">$5,700.00</span><span class="num">10%</span><span class="num">$570.00</span><span>Sep 2026</span><span><span class="stp paid">Paid</span></span></div>
           </div>
         </div>
         <div style="height:400px"></div>
       </div>
 
-      <!-- upload modal -->
-      <div class="dim" style="--d:33.6s;--o:35.0s"></div>
-      <div class="modal" style="--d:33.65s;--o:34.75s">
+      <!-- upload → invoice received → payment day → paid -->
+      <div class="dim" style="--d:36.05s;--o:99s"></div>
+      <div class="modal" style="--d:36.1s;--o:37.15s">
         <h3>Upload your invoice</h3>
-        <div class="fld"><label>Invoice number</label><div class="in" data-type="YC-0112" data-at="33950" data-dur="300"></div></div>
-        <div class="fld"><label>Amount</label><div class="in" data-type="$1,340.00" data-at="34150" data-dur="250"></div></div>
-        <div class="fld"><label>Invoice PDF</label><div class="in file">📎 <span data-type="YourCo_Invoice_Nov.pdf" data-at="34300" data-dur="200"></span></div></div>
-        <div class="mbtn press" style="--d:34.5s">Upload invoice</div>
+        <div class="fld"><label>Invoice number</label><div class="in" data-type="YC-0112" data-at="36400" data-dur="250"></div></div>
+        <div class="fld"><label>Amount</label><div class="in" data-type="$1,340.00" data-at="36580" data-dur="220"></div></div>
+        <div class="fld"><label>Invoice PDF</label><div class="in file">📎 <span data-type="YourCo_Invoice_Nov.pdf" data-at="36740" data-dur="180"></span></div></div>
+        <div class="mbtn press" style="--d:36.95s">Upload invoice</div>
       </div>
       <div id="fw"></div>
-      <div class="toast" style="--d:34.6s;--o:35.5s"><div class="tick"><svg viewBox="0 0 40 40"><path style="--d:34.9s" d="M9 21l8 8 14-17"/></svg></div><div><b style="font-size:19px">Invoice received</b><div style="font-size:15px;color:var(--lav)">We will check it and confirm.</div></div></div>
-      <!-- paid celebration -->
-      <div class="modal" style="--d:34.95s;--o:99s;text-align:left">
-        <div class="appicon" style="--d:35.1s;width:62px;height:62px;border-radius:16px"><img src="assets/whistle-mark-vector.svg" alt="" style="width:46px;height:46px"></div>
+      <div class="toast" style="--d:37.1s;--o:37.75s"><div class="tick"><svg viewBox="0 0 40 40"><path style="--d:37.3s" d="M9 21l8 8 14-17"/></svg></div><div><b style="font-size:20px">Invoice received</b><div style="font-size:16px;color:var(--lav)">We will check it and confirm.</div></div></div>
+      <div class="datechip" style="--d:37.75s;--o:38.35s"><div class="m">NOV 2026</div><div class="dd">30</div><div class="lb">Payment day</div></div>
+      <div class="modal" style="--d:38.4s;--o:99s;text-align:left">
+        <div class="appicon" style="--d:38.55s;width:62px;height:62px;border-radius:16px"><img src="assets/whistle-mark-vector.svg" alt="" style="width:46px;height:46px"></div>
         <h3 style="margin-top:14px">Your referral fee was paid!</h3>
-        <div class="paidamt" data-count="1340" data-at="35050" data-dur="500" data-fmt="usd">$0.00</div>
-        <div style="font-size:16px;line-height:1.45;color:#4B5476">Your referral fee of $1,340.00 for the Nov 2026 payment run was paid on 30 Nov 2026. Thank you for your referrals.</div>
+        <div class="paidamt" data-count="1340" data-at="38500" data-dur="400" data-fmt="usd">$0.00</div>
+        <div style="font-size:17px;line-height:1.45;color:#4B5476">Your referral fee of $1,340.00 for the Nov 2026 payment run was paid on 30 Nov 2026. Thank you for your referrals.</div>
       </div>
       <div id="shower"></div>
     </div></div>
   </section>
 
-  <!-- S7 · CLIENTS 35.6–39.4s -->
-  <section class="scene" style="--in:35.6s;--out:39.35s;perspective:1100px;perspective-origin:50% 55%">
-    <div class="center" style="position:absolute;left:120px;right:120px;top:84px">
-      <div class="eyebrow up" style="--d:35.7s;margin-bottom:16px">Join a winning team</div>
-      <h2 class="h2 up" style="--d:35.85s;font-size:62px">Trusted by <span class="gold">350+</span> companies</h2>
-      <div class="up" style="--d:36.1s;margin-top:14px;font:500 28px 'DM Sans';color:var(--lav)">Our clients generate <b style="color:#fff">$16.67M+</b> in pipeline every month</div>
+  <!-- S7 · CLIENTS 39.6–43.4s -->
+  <section class="scene" style="--in:39.6s;--out:43.35s;perspective:1100px;perspective-origin:50% 60%">
+    <div class="center" style="position:absolute;left:100px;right:100px;top:80px">
+      <div class="eyebrow up" style="--d:39.7s;margin-bottom:16px">Your intros are in safe hands</div>
+      <h2 class="h2 up" style="--d:39.85s;font-size:62px">Trusted by <span class="gold">350+</span> companies</h2>
+      <div class="up" style="--d:40.05s;margin-top:14px;font:600 30px 'DM Sans';color:var(--lav)">Whistle's SDRs source <b style="color:#fff">$16.67M+</b> in pipeline<br>for clients every month</div>
     </div>
-    <div class="ring" id="ring1" style="top:560px"></div>
-    <div class="ring" id="ring2" style="top:800px"></div>
+    <div class="ring" id="ring1" style="top:540px"></div>
+    <div class="ring" id="ring2" style="top:715px"></div>
+    <div class="ring" id="ring3" style="top:890px"></div>
   </section>
 
-  <!-- S8 · PARTNERS 39.4–42.8s -->
-  <section class="scene" style="--in:39.4s;--out:42.75s">
-    <div class="center" style="position:absolute;left:110px;right:110px;top:90px">
-      <div class="eyebrow up" style="--d:39.5s;margin-bottom:16px">You'll be in good company</div>
-      <h2 class="h2 up" style="--d:39.65s;font-size:60px">Join our growing<br><span class="grad">partner network</span></h2>
-      <div class="up" style="--d:39.9s;margin-top:12px;font:500 26px 'DM Sans';color:var(--lav)">Consultancies, agencies and advisors already refer clients to Whistle</div>
+  <!-- S8 · PARTNERS 43.4–46.8s -->
+  <section class="scene" style="--in:43.4s;--out:46.75s">
+    <div class="center" style="position:absolute;left:100px;right:100px;top:86px">
+      <div class="eyebrow up" style="--d:43.5s;margin-bottom:16px">You'll be in good company</div>
+      <h2 class="h2 up" style="--d:43.65s;font-size:60px">Join our growing<br><span class="grad">partner network</span></h2>
+      <div class="up" style="--d:43.9s;margin-top:12px;font:600 28px 'DM Sans';color:var(--lav)">Consultancies, agencies and advisors refer to Whistle</div>
     </div>
-    <div class="pgrid-wrap" style="--d:39.6s"><div class="pgrid" id="pgrid" style="top:400px"></div></div>
+    <div class="pgrid-wrap" style="--d:43.6s"><div class="pgrid" id="pgrid" style="top:420px"></div></div>
   </section>
 
-  <!-- S9 · TEAM 42.8–46.6s -->
-  <section class="scene" style="--in:42.8s;--out:46.55s">
-    <div class="center" style="position:absolute;left:110px;right:110px;top:96px">
-      <div class="eyebrow up" style="--d:42.9s;margin-bottom:16px">Real people. Real support.</div>
-      <h2 class="h2 up" style="--d:43.05s;font-size:62px">The team behind<br><span class="grad">your partnership</span></h2>
+  <!-- S9 · TEAM 46.8–50.4s -->
+  <section class="scene" style="--in:46.8s;--out:50.35s">
+    <div class="center" style="position:absolute;left:100px;right:100px;top:110px">
+      <div class="eyebrow up" style="--d:46.9s;margin-bottom:16px">Your partnerships team</div>
+      <h2 class="h2 up" style="--d:47.05s;font-size:62px">The team behind<br><span class="grad">your partnership</span></h2>
     </div>
-    <div class="team" id="team"></div>
-    <div class="center callout up" style="--d:45.1s">Questions? <b>Book a call with our partnerships team.</b></div>
+    <div class="team" id="team" style="top:400px;left:14px;right:14px;gap:4px"></div>
   </section>
 
-  <!-- S10 · CTA 46.6–52.0s -->
-  <section class="scene" style="--in:46.6s">
+  <!-- S10 · CTA 50.4–57.0s -->
+  <section class="scene" style="--in:50.5s">
     <div id="confetti"></div>
-    <div class="center" style="position:absolute;left:60px;right:60px;top:430px">
-      <h1 class="cta-h"><span data-split="up" data-at="47.6" data-gap=".1">Become a</span><br><span class="up x3d" style="--d:47.85s;display:inline-block">Whistle</span> <span class="up gold x3d-gold" style="--d:48.0s;display:inline-block">Partner.</span></h1>
-      <div class="trio up" style="--d:48.4s;margin:34px 0 40px">Refer · Track · Earn 10%</div>
-      <div class="btn-wrap" style="--d:48.8s"><div class="btn btn-pulse" style="--d:49.5s">whistle.ltd/our-experts<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></div>
+    <div class="center" style="position:absolute;left:60px;right:60px;top:392px">
+      <h1 class="cta-h"><span data-split="up" data-at="50.85" data-gap=".08">Become a</span><br><span class="up x3d" style="--d:51.0s;display:inline-block">Whistle</span> <span class="up gold x3d-gold" style="--d:51.1s;display:inline-block">Partner.</span></h1>
+      <div class="trio up" style="--d:51.35s;margin:30px 0 34px">Refer · Track · Earn a standard 10%</div>
+      <div class="btn-wrap" style="--d:51.55s"><div class="btn btn-pulse" style="--d:52.3s">Book a partner call<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div></div>
+      <div class="url up" style="--d:51.75s">whistle.ltd/our-experts</div>
     </div>
-    <div class="foot up" style="--d:49.4s;bottom:40px;font-size:18px">Standard 10% fee on retainer fees collected during the referred client's initial term. Terms apply: whistle.ltd/referral-partner-terms-conditions</div>
+    <div class="foot up" style="--d:51.9s;font-size:21px">Standard 10% referral fee on retainer fees Whistle collects from a qualified referral during its initial contract term. Terms: whistle.ltd/referral-partner-terms-conditions</div>
   </section>
+  <div id="endfade"></div>
 </div>
 
 <script type="module">
 import { createLogo3D } from './assets/js/logo3d.js';
 
-const DURATION = 52000;
+const DURATION = 57000;
 let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
 const $ = s => document.querySelector(s);
 
 // ---------- content data ----------
-const CLIENTS = ['ringcentral','unity','lusha','thinkific','bonusly','kaltura_skip','talentadore','blinkops','checkproof','dot-compliance',
-  'getfocus','molemap','qbiq','redflag','splendid-group','tax-systems','parita','practice-engine','bio-beat'].filter(c => !c.endsWith('_skip'));
-const PARTNERS = ['wingm.jpg','foundations-sales-consulting.png','maia-digital.png','matchboard.png','airfleet.png','net-new-solutions.png',
+const CLIENTS = ['ringcentral','unity','lusha','thinkific','bonusly','talentadore','blinkops','checkproof','dot-compliance',
+  'getfocus','molemap','qbiq','redflag','splendid-group','tax-systems','parita','practice-engine','bio-beat'];
+const PARTNERS = ['wingm.png','foundations-sales-consulting.png','maia-digital.png','matchboard.png','airfleet.png','net-new-solutions.png',
   'shareon-marketing.png','automate-revops.png','gossip-media.png','penguin-strategies.png','lodestar-technologies.png'];
 const TEAM = [
   { name: 'Claire Webster', title: 'Head of Partnerships', img: 'assets/team/claire-webster-up.png' },
@@ -504,9 +521,9 @@ const TEAM = [
   { name: 'Yonah Zeff', title: 'COO', img: 'assets/team/yonah-zeff.png', cut: true },
 ];
 const POTS = [
-  { name: 'Example Client A', win: 'Fee window 1 Feb 2026 → 31 Jan 2027', cap: 2400, paid: 1800, earned: 600, exp: 0 },
-  { name: 'Example Client B', win: 'Fee window 1 May 2026 → 30 Apr 2027', cap: 3600, paid: 1140, earned: 520, exp: 400 },
-  { name: 'Example Client C', win: 'Fee window 1 Sep 2026 → 31 Aug 2027', cap: 1800, paid: 0, earned: 220, exp: 460 },
+  { name: 'Example Client A', win: 'Fee window 1 Jul 2026 → 31 Oct 2026', cap: 2400, paid: 1800, earned: 600, exp: 0 },
+  { name: 'Example Client B', win: 'Fee window 1 Aug 2026 → 31 Jan 2027', cap: 3600, paid: 1140, earned: 520, exp: 400 },
+  { name: 'Example Client C', win: 'Fee window 1 Oct 2026 → 31 Mar 2027', cap: 1800, paid: 0, earned: 220, exp: 460 },
 ];
 const usd = (n, dp = 2) => '$' + n.toLocaleString('en-US', { minimumFractionDigits: dp, maximumFractionDigits: dp });
 
@@ -520,7 +537,7 @@ const coins = $('#coins');
 for (let i = 0; i < 20; i++) {
   const a = (i / 20) * Math.PI * 2 + rnd() * .5, dist = 330 + rnd() * 260, el = document.createElement('div');
   el.className = 'cfly';
-  el.style.cssText = `--x:${(Math.cos(a) * dist).toFixed(0)}px;--y:${(Math.sin(a) * dist * .8 - 60).toFixed(0)}px;--s:${(56 + rnd() * 54).toFixed(0)}px;--d:${(3.9 + rnd() * .22).toFixed(2)}s;--sp:${(.5 + rnd() * .5).toFixed(2)}s`;
+  el.style.cssText = `--x:${(Math.cos(a) * dist).toFixed(0)}px;--y:${(Math.sin(a) * dist * .8 - 60).toFixed(0)}px;--s:${(56 + rnd() * 54).toFixed(0)}px;--d:${(4.0 + rnd() * .22).toFixed(2)}s;--sp:${(.5 + rnd() * .5).toFixed(2)}s`;
   el.innerHTML = '<div class="coin">$</div>';
   coins.appendChild(el);
 }
@@ -528,7 +545,7 @@ for (let i = 0; i < 20; i++) {
 // pots of gold
 function potSVG(p, i) {
   const H = 52, base = 106, fp = p.paid / p.cap, fe = p.earned / p.cap, fx = p.exp / p.cap, full = fp + fe + fx;
-  const hp = H * fp, he = H * fe, hx = H * fx, d = (29.2 + i * .18).toFixed(2);
+  const hp = H * fp, he = H * fe, hx = H * fx, d = (31.2 + i * .18).toFixed(2);
   let heap = '', spill = '';
   if (full >= .9) {
     heap = `<g class="heap" style="--d:${(+d + 1.2).toFixed(2)}s">` + [[38,52],[50,48],[62,46],[74,48],[84,52],[44,46],[56,42],[68,42],[78,46],[50,38],[62,36],[72,40]]
@@ -564,7 +581,7 @@ $('#pots').innerHTML = POTS.map((p, i) => {
 
 // fireworks on invoice upload + coin shower on paid modal
 const fw = $('#fw'), fcols = ['#4A19E4', '#7B4DFF', '#14C3A6', '#FFC83D', '#FF6B5B', '#B49BFF', '#2A78D6'];
-[[300, 260, 34.6], [660, 220, 34.75], [480, 160, 34.9]].forEach(([cx, cy, t]) => {
+[[300, 260, 37.1], [660, 220, 37.25], [480, 160, 37.4]].forEach(([cx, cy, t]) => {
   for (let i = 0; i < 22; i++) {
     const a = i / 22 * Math.PI * 2, r = 110 + rnd() * 90, s = document.createElement('i');
     s.className = 'spark';
@@ -575,34 +592,34 @@ const fw = $('#fw'), fcols = ['#4A19E4', '#7B4DFF', '#14C3A6', '#FFC83D', '#FF6B
 const shower = $('#shower');
 for (let i = 0; i < 26; i++) {
   const s = document.createElement('div'); s.className = 'shower';
-  s.style.cssText = `--l:${(rnd() * 94).toFixed(1)}%;--t:${(1.4 + rnd() * 1).toFixed(2)}s;--d:${(35.0 + rnd() * .5).toFixed(2)}s;--dx:${(rnd() * 80 - 40).toFixed(0)}px;--r:${(rnd() * 400).toFixed(0)}deg`;
+  s.style.cssText = `--l:${(rnd() * 94).toFixed(1)}%;--t:${(1.4 + rnd() * 1).toFixed(2)}s;--d:${(38.45 + rnd() * .5).toFixed(2)}s;--dx:${(rnd() * 80 - 40).toFixed(0)}px;--r:${(rnd() * 400).toFixed(0)}deg`;
   s.innerHTML = `<div class="coin" style="--sp:${(.4 + rnd() * .4).toFixed(2)}s;font-size:18px">$</div>`;
   shower.appendChild(s);
 }
 
-// client logo rings
+// client logo rings: three 3D carousels of six, alternating direction
 const ringItems = [];
-[['#ring1', CLIENTS.slice(0, 9), 1], ['#ring2', CLIENTS.slice(9), -1]].forEach(([sel, list, dir]) => {
+[['#ring1', CLIENTS.slice(0, 6), 1], ['#ring2', CLIENTS.slice(6, 12), -1], ['#ring3', CLIENTS.slice(12), 1]].forEach(([sel, list, dir], r) => {
   const ring = $(sel);
   list.forEach((c, i) => {
     const el = document.createElement('div'); el.className = 'lchip';
-    el.innerHTML = `<img src="assets/logos/clients/${c}.png" alt="">`;
+    el.innerHTML = `<img src="assets/logos/trim/clients/${c}.png" alt="">`;
     ring.appendChild(el);
-    ringItems.push({ el, i, n: list.length, dir, row: sel });
+    ringItems.push({ el, i, n: list.length, dir, r });
   });
 });
 
 // partner tiles
-$('#pgrid').innerHTML = PARTNERS.map((f, i) => `<div class="ptile" style="--d:${(39.9 + i * .09).toFixed(2)}s"><img src="assets/logos/partners/${f}" alt=""></div>`).join('');
+$('#pgrid').innerHTML = PARTNERS.map((f, i) => `<div class="ptile" style="--d:${(44.0 + i * .09).toFixed(2)}s"><img src="assets/logos/trim/partners/${f}" alt=""></div>`).join('');
 
 // team
-$('#team').innerHTML = TEAM.map((p, i) => `<div class="person" style="--d:${(43.3 + i * .18).toFixed(2)}s"><div class="ph"><div class="disc"><img class="${p.cut ? 'cut' : ''}" src="${p.img}" alt=""></div></div><h4>${p.name}</h4><p>${p.title}</p></div>`).join('');
+$('#team').innerHTML = TEAM.map((p, i) => `<div class="person" style="--d:${(47.3 + i * .16).toFixed(2)}s"><div class="ph"><div class="disc"><img class="${p.cut ? 'cut' : ''}" src="${p.img}" alt=""></div></div><h4>${p.name}</h4><p>${p.title}</p></div>`).join('');
 
 // confetti
 const conf = $('#confetti'), cc = ['#fff', '#FFC83D', '#14C3A6', '#B4BADD', '#7FA0FF', '#FF6B5B'];
 for (let i = 0; i < 80; i++) {
   const p = document.createElement('div'), w = 12 + rnd() * 16; p.className = 'conf';
-  p.style.cssText = `--l:${(rnd() * 100).toFixed(1)}%;--w:${w.toFixed(0)}px;--h:${(w * (.4 + rnd() * 1.2)).toFixed(0)}px;--c:${cc[i % cc.length]};--br:${rnd() > .6 ? '50%' : '3px'};--dx:${(rnd() * 240 - 120).toFixed(0)}px;--r:${(rnd() * 1200 - 600).toFixed(0)}deg;--t:${(2.4 + rnd() * 1.8).toFixed(2)}s;--d:${(46.7 + rnd() * 1.6).toFixed(2)}s`;
+  p.style.cssText = `--l:${(rnd() * 100).toFixed(1)}%;--w:${w.toFixed(0)}px;--h:${(w * (.4 + rnd() * 1.2)).toFixed(0)}px;--c:${cc[i % cc.length]};--br:${rnd() > .6 ? '50%' : '3px'};--dx:${(rnd() * 240 - 120).toFixed(0)}px;--r:${(rnd() * 1200 - 600).toFixed(0)}deg;--t:${(2.4 + rnd() * 1.8).toFixed(2)}s;--d:${(50.6 + rnd() * 1.6).toFixed(2)}s`;
   conf.appendChild(p);
 }
 
@@ -640,57 +657,57 @@ const TAU = Math.PI * 2;
 // 3D logo choreography (x,y px from centre; z px towards camera; r* radians; m* = mark; w* = wordmark)
 const L = makeTrack({ op: 0, x: 0, y: 0, z: 0, rx: 0, ry: 0, rz: 0, s: 1, mdx: 0, mdy: 0, mrx: 0, mry: 0, mrz: 0, ms: 1, wdx: 0, wrx: 0, wry: 0, wo: 1, light: 0 });
 L.k(0, { op: 1, y: -205, z: -2600, s: 1.9, ry: -2 * TAU, rx: .35, mdx: MC, wo: 0 })
- .k(1300, { z: 0, ry: 0, rx: 0 }, 'out')
- .k(1550, { rz: .22 }).k(1800, { rz: -.12 }).k(2050, { rz: 0 })
- .k(2650, { ry: .35, rx: -.08, light: .6 })
- .k(2950, { z: 880, ry: .9 }, 'in').hide(2960)
- // S3: lock-up assembles — mark spins in from the left, wordmark swings in from the right
+ .k(1200, { z: 0, ry: 0, rx: 0 }, 'out')
+ .k(1450, { rz: .22 }).k(1700, { rz: -.12 }).k(1950, { rz: 0 })
+ .k(2450, { ry: .3, rx: -.06, light: .6 })
+ .k(2750, { op: 0, z: 500, ry: .6 }, 'in')
+ // S3: lock-up assembles; mark spins in from the left, wordmark swings in from the right
  .show(5700, { x: 0, y: -125, z: -1800, s: 1.28, rx: .1, ry: -.6, rz: 0, mdx: -95, mry: -2 * TAU, wo: 1, wdx: 130, wry: 1.5, light: 0 })
- .k(7000, { z: 0, rx: 0, ry: 0, mdx: 0, mry: 0, wdx: 0, wry: 0 }, 'out')
- .k(8300, { ry: .32, rx: -.1, light: 1 })
- .k(9450, { ry: -.24, rx: .06, light: .2 })
- .k(9940, { z: 900, ry: -.6 }, 'in').hide(9950)
- // corner watermark during the explainer and earnings
- .show(10400, { x: 448, y: -452, z: 0, s: .001, rx: 0, ry: 0, rz: 0, mdx: MC, mry: 0, wo: 0, light: .5 })
- .k(11000, { s: .38 }, 'back')
- .k(22000, { ry: 4 * TAU }, 'lin')
- .k(22250, { s: .001 }, 'in').hide(22260)
- // wipe: a giant spinning mark sweeps across into the platform tour
- .show(22320, { x: -980, y: 60, z: 0, s: 3.4, rx: 0, ry: 0, rz: .55, mdx: MC, wo: 0 })
- .k(23380, { x: 980, y: -60, rz: -.55, ry: TAU }, 'io').hide(23390)
- // corner watermark during proof + team
- .show(35800, { x: 448, y: -452, z: 0, s: .001, rx: 0, ry: 0, rz: 0, mdx: MC, mry: 0, wo: 0, light: .5 })
- .k(36400, { s: .38 }, 'back')
- .k(46200, { ry: 3 * TAU }, 'lin')
- .k(46450, { s: .001 }, 'in').hide(46460)
- // CTA: full lock-up flies in, mark does a flourish
- .show(46700, { x: 0, y: -255, z: -2600, s: 1.08, rx: .25, ry: -2 * TAU, rz: 0, mdx: 0, mry: 0, wo: 1, wdx: 0, wry: 0, light: 0 })
- .k(48000, { z: 0, ry: 0, rx: 0 }, 'out')
- .k(48900).k(49900, { mry: TAU, light: .8 })
- .k(50900, { ry: .26, rx: -.06 })
- .k(52000, { ry: -.14, light: .3 });
+ .k(6700, { z: 0, rx: 0, ry: 0, mdx: 0, mry: 0, wdx: 0, wry: 0 }, 'out')
+ .k(7800, { ry: .3, rx: -.08, light: 1 })
+ .k(8800, { ry: -.18, rx: .04, light: .3 })
+ .k(9150, { op: 0, z: 400, ry: -.35 }, 'in')
+ // corner mark during the explainer + earnings: faces camera, gentle sway
+ .show(9700, { x: 448, y: -452, z: 0, s: .001, rx: 0, ry: 0, rz: 0, mdx: MC, mry: 0, wo: 0, light: .5 })
+ .k(10300, { s: .38 }, 'back')
+ .k(14000, { ry: .3 }).k(18000, { ry: -.25 }).k(22000, { ry: .2 })
+ .k(23900, { s: .001 }, 'in').hide(23910)
+ // wipe: a giant mark sweeps across and covers the cut into the platform tour
+ .show(24300, { x: -1250, y: 40, z: 0, s: 8, rx: 0, ry: 0, rz: .35, mdx: MC, wo: 0 })
+ .k(25200, { x: 1250, y: -40, rz: -.35, ry: .5 }, 'io').hide(25210)
+ // corner mark during proof + team
+ .show(39800, { x: 448, y: -452, z: 0, s: .001, rx: 0, ry: 0, rz: 0, mdx: MC, mry: 0, wo: 0, light: .5 })
+ .k(40400, { s: .38 }, 'back')
+ .k(44000, { ry: .3 }).k(48000, { ry: -.25 })
+ .k(50200, { s: .001 }, 'in').hide(50210)
+ // CTA: lock-up flies straight in (no mirrored spin), then the mark does a flourish
+ .show(50650, { x: 0, y: -290, z: -1400, s: 1.0, rx: .2, ry: .35, rz: 0, mdx: 0, mry: 0, wo: 1, wdx: 0, wry: 0, light: 0 })
+ .k(51350, { z: 0, ry: 0, rx: 0 }, 'out')
+ .k(52600).k(53600, { mry: TAU, light: .8 })
+ .k(55000, { ry: .22, rx: -.05 })
+ .k(57000, { ry: -.12, light: .3 });
 
-const BG = makeTrack({ vivid: 0, floor: 0 });
-BG.k(0).k(2900).k(3150, { vivid: 1 }).k(5450).k(5700, { vivid: 0, floor: .55 }).k(9900).k(10200, { floor: 0 })
-  .k(16300).k(16600, { vivid: 1 }).k(22700).k(23100, { vivid: 0, floor: .5 }).k(46400).k(46800, { vivid: 1, floor: 0 }).k(52000);
+const BG = makeTrack({ vivid: 0, floor: 0, end: 0 });
+BG.k(0).k(2900).k(3150, { vivid: 1 }).k(5450).k(5700, { vivid: 0, floor: .55 }).k(9050).k(9350, { floor: 0 })
+  .k(16800).k(17100, { vivid: 1 }).k(24600).k(24800, { vivid: 0, floor: .5 }).k(50300).k(50600, { vivid: 1, floor: 0 })
+  .k(56550).k(57000, { end: 1 });
 
 // dashboard camera: scroll to anchors + 3D tilt drift
 const page = $('#dpage'), win = $('#dwin');
 const off = id => Math.max(0, document.getElementById(id).offsetTop - 22);
 const D = makeTrack({ sc: 0, rx: 52, ry: -6, ty: 420, sca: .9 });
-D.k(23000).k(23900, { rx: 12, ry: -9, ty: 0, sca: 1.04 }, 'out')
- .k(26000, { rx: 9, ry: -4 }, 'io')
- .k(26600, { sc: off('a-journey') - 6, rx: 11, ry: 5, sca: 1.08 }, 'io').k(28600, { ry: 8 })
- .k(29200, { sc: off('a-pots'), rx: 10, ry: -6, sca: 1.07 }, 'io').k(31400, { ry: -2 })
- .k(32000, { sc: off('a-fees'), rx: 12, ry: 6, sca: 1.08 }, 'io').k(33400, { ry: 3 })
- .k(33700, { sc: 0, rx: 6, ry: 0, sca: 1 }, 'io').k(35600, { rx: 4 });
+D.k(24750).k(25550, { rx: 12, ry: -8, ty: 0, sca: 1.04 }, 'out')
+ .k(27750, { rx: 9, ry: -3 }, 'io')
+ .k(28250, { sc: off('a-journey') - 6, rx: 10, ry: 4, sca: 1.15 }, 'io').k(30550, { ry: 7 })
+ .k(31050, { sc: off('a-pots'), rx: 10, ry: -5, sca: 1.14 }, 'io').k(33350, { ry: -1 })
+ .k(33850, { sc: off('a-fees'), rx: 11, ry: 5, sca: 1.08 }, 'io').k(35550, { ry: 3 })
+ .k(36000, { sc: 0, rx: 6, ry: 0, sca: 1 }, 'io').k(39600, { rx: 4 });
 
 // ---------- seek ----------
 const anims = document.getAnimations(); anims.forEach(a => a.pause());
 const counters = [...document.querySelectorAll('[data-count]')];
 const typers = [...document.querySelectorAll('[data-type]')];
-const tA = [...document.querySelectorAll('.tA')], tB = [...document.querySelectorAll('.tB')];
-const vivid = $('#vivid'), floor = $('#floor'), gl = $('#gl');
+const vivid = $('#vivid'), floor = $('#floor'), gl = $('#gl'), endfade = $('#endfade');
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 
 window.seek = ms => {
@@ -703,9 +720,6 @@ window.seek = ms => {
     const s = t.dataset.type, n = Math.round(s.length * clamp((ms - +t.dataset.at) / +t.dataset.dur));
     t.textContent = s.slice(0, n);
   }
-  // journey: "you are here" moves from step 3 to step 4 at 27.4s
-  const sw = clamp((ms - 27400) / 350);
-  tA.forEach(e => e.style.opacity = 1 - sw); tB.forEach(e => e.style.opacity = sw);
 
   const b = BG.at(ms); vivid.style.opacity = b.vivid; floor.style.opacity = b.floor;
 
@@ -713,14 +727,15 @@ window.seek = ms => {
   page.style.transform = `translateY(${-d.sc}px)`;
   win.style.transform = `translateY(${d.ty}px) rotateX(${d.rx}deg) rotateY(${d.ry}deg) scale(${d.sca})`;
 
-  // client logo rings (3D carousels)
+  // client logo rings (3D carousels): chips fade out as they turn away
   for (const it of ringItems) {
-    const base = (ms - 35600) / 1000 * .55 * it.dir + (it.row === '#ring2' ? .35 : 0);
-    const th = base + it.i / it.n * TAU, R = 420, x = Math.sin(th) * R, z = Math.cos(th) * R;
-    it.el.style.transform = `translate3d(${x.toFixed(1)}px,0,${(z - R * .35).toFixed(1)}px) rotateY(${th}rad)`;
-    it.el.style.opacity = (.25 + .75 * (z / R + 1) / 2).toFixed(3);
+    const base = (ms - 39600) / 1000 * 1.25 * it.dir + it.r * .5;
+    const th = base + it.i / it.n * TAU, R = 330, x = Math.sin(th) * R, z = Math.cos(th) * R;
+    it.el.style.transform = `translate3d(${x.toFixed(1)}px,0,${(z - R * .2).toFixed(1)}px) rotateY(${th}rad)`;
+    it.el.style.opacity = clamp((Math.cos(th) - .15) / .6).toFixed(3);
     it.el.style.zIndex = Math.round(z + R);
   }
+  endfade.style.opacity = b.end;
 
   const s = L.at(ms);
   gl.style.opacity = s.op;
